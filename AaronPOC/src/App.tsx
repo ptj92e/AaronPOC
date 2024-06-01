@@ -1,10 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import useFetchData from './hooks/useFetchData'
+
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const url = `https://api.github.com/repos/${import.meta.env.VITE_GITHUB_REPO_OWNER}/${import.meta.env.VITE_GITHUB_REPO}/contents/${import.meta.env.VITE_GITHUB_FILE_BASE_PATH}/home.json`
+  
+  const { data, loading, error} = useFetchData(url)
+
+  useEffect(() => {
+    console.log(data)
+  }, [data])
+
+  useEffect(() => {
+    console.log(loading)
+  }, [loading])
+
+  useEffect(() => {
+    console.log(error)
+  }, [error])
 
   return (
     <>
