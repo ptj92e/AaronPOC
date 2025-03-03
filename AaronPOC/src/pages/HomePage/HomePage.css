@@ -7,4 +7,9 @@
 .homeParallax {
   height: 500px;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.bi {
+  font-size: 75px;
 }

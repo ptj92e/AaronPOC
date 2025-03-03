@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { ChangeEvent, FormEvent } from 'react'
 
 import { Alert, Button, Container, Col, Form, Row } from 'react-bootstrap'

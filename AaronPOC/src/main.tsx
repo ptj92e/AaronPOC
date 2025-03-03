@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from './App.tsx'
 
+import 'bootstrap-icons/font/bootstrap-icons.css'
+
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
